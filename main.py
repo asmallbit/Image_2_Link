@@ -55,7 +55,7 @@ async def send_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
         imgbb_image_url = data["data"]["image"]["url"]
 
         # 发送图片直链给用户
-        await context.bot.send_message(chat_id=chat_id, text=f"Okay. {imgbb_image_url}")
+        await context.bot.send_message(chat_id=chat_id, text=imgbb_image_url)
         
     # 删除文件
     os.remove(f"./{file_name}")
